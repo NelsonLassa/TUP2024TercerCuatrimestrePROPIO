@@ -1,0 +1,49 @@
+body {
+    background-image: url(greg-rakozy-vw3Ahg4x1tY-unsplash.jpg);
+    background-size: cover;
+}
+
+/* Estilos para h1 dentro de la clase .claseNumero */
+h1 {
+    color: rgb(206, 57, 57);
+    /* Color del texto */
+    font-family: 'Arial', sans-serif;
+    /* Tipo de fuente */
+    text-align: left;
+    /* Alineación del texto */
+    margin-bottom: 20px;
+    /* Espacio debajo del h1 */
+    margin-left: 25%;
+}
+
+/* Estilos para h2 dentro de la clase .claseNumero */
+h2 {
+    color: #2980b9;
+    /* Color del texto */
+    font-family: 'Verdana', sans-serif;
+    /* Tipo de fuente */
+    text-align: left;
+    /* Alineación del texto */
+    margin-top: 10px;
+    /* Espacio arriba del h2 */
+    margin-bottom: 15px;
+    /* Espacio debajo del h2 */
+    margin-left: 10%;
+}
+
+/* Estilos para p dentro de la clase .claseNumero */
+p {
+    color: #333;
+    /* Color del texto */
+    font-family: 'Georgia', serif;
+    /* Tipo de fuente */
+    line-height: 1.6;
+    /* Altura de línea */
+    text-align: justify;
+    /* Justificación del texto */
+    margin-left: 4%;
+    padding: 10px 0;
+    /* Padding superior e inferior */
+    width: 40%;
+    height: auto;
+}
