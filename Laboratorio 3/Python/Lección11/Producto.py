@@ -27,7 +27,7 @@ class Producto:
 
     # Sobre escribimos el método str
     def __str__(self):
-        return f'Id Producto; {self._id_producto}, Nombre: {self._nombre}, Precio: {self._precio}'
+        return f'Id Producto: {self._id_producto}, Nombre: {self._nombre}, Precio: {self._precio}'
 
 
 if __name__ == '__main__': # Solo será visible de la prueba se ejecuta desde aqui
