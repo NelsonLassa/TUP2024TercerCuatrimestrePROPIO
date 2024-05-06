@@ -7,4 +7,10 @@ public class Gerente extends Empleado {
         super(nombre, sueldo);
         this.departamento = departamento;
     }
+
+    // Anotación modifica el metodo pero no modifica solo muestra la sobreescritura
+    @Override
+    public String obtenerDetalles(){
+        return super.obtenerDetalles()+ " , Departamento "+this.departamento ;
+    }
 }
