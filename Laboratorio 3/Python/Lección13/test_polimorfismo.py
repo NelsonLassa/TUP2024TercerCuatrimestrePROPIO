@@ -16,3 +16,4 @@ imprimir_detalles(empleado)
 
 gerente = Gerente("Valentin", 70000.00, 'Sistemas')
 imprimir_detalles(gerente)
+# Se realiza un debug
