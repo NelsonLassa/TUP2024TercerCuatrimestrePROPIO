@@ -1,8 +1,9 @@
-resultado  = None
-a = 7
-b = 0
+resultado = None
+
 try:
-    resultado = a/b # modificamos
+    a = int(input('Digite el primer número: '))
+    b = int(input("Digite el segundo número: "))
+    resultado = a / b  # modificamos
 except TypeError as e:
     print(f'TypeError Ocurrió un error: {type(e)}')
 except ZeroDivisionError as e:
