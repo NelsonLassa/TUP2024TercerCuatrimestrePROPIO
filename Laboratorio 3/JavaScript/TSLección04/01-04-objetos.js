@@ -10,7 +10,12 @@ let persona = {
     edad: 30,
     nombreCompleto: function () { // método o funcion en JavaScript
         return this.nombre + " " + this.apellido;
+    },
+    get nombreEdad() { // Este es el método get
+        return 'El nombre es: ' + this.nombre + ' edad: ' + this.edad;
+
     }
+
 }
 
 console.log(persona.nombre);
@@ -22,7 +27,7 @@ console.log(persona.nombreCompleto());
 
 let persona2 = new Object(); // Debe crear un nuevo objeto en memoria
 persona2.nombre = "Juan";
-persona2.direccion= "Salada 14";
+persona2.direccion = "Salada 14";
 persona2.telefono = "5492618282821";
 console.log(persona2.telefono);
 console.log("Creamos un nuevo objeto")
@@ -30,7 +35,7 @@ console.log(persona["apellido"]); // Accedemos como si fuera un arreglo
 
 console.log("Usamos el ciclo for in");
 //for in y accdemos al objeto como si fuera un arreglo
-for(propiedad in persona){
+for (propiedad in persona) {
     console.log(propiedad);
     console.log(persona[propiedad]);
 }
@@ -43,11 +48,11 @@ console.log(persona);
 //Distinta Forma de imprimir un objeto
 //Número 1: la más sencilla: concatenar cada valor de cada propiedad
 console.log("Distinta Forma de imprimir un objeto: forma 1");
-console.log(persona.nombre+", "+persona.apellido);
+console.log(persona.nombre + ", " + persona.apellido);
 
 //Número 2: A través del ciclo for in
 console.log("Distinta Forma de imprimir un objeto: forma 2");
-for(nombrePropiedad in persona){
+for (nombrePropiedad in persona) {
     console.log(persona[nombrePropiedad]);
 }
 
@@ -60,3 +65,6 @@ console.log(personaArray);
 console.log("Distinta Forma de imprimir un objeto: forma 4");
 let personaString = JSON.stringify(persona);
 console.log(personaString);
+
+console.log('Comenzamosa utilizar el método get');
+console.log(persona.nombreEdad);
