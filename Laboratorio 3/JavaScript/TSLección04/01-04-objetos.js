@@ -87,8 +87,8 @@ function Persona3(nombre, apellido, email) { // constructor
     this.nombre = nombre;
     this.apellido = apellido;
     this.email = email;
-    this.nombreCompleto = function(){
-        return this.nombre + ' ' + this.apellido; 
+    this.nombreCompleto = function () {
+        return this.nombre + ' ' + this.apellido;
     }
 }
 
@@ -98,7 +98,7 @@ padre.telefono = '5492618282821'; // Una propiedad exclusiva del objeto padre
 console.log(padre);
 console.log(padre.nombreCompleto());
 
-let madre = new Persona3('Laura', 'Contrera','contreral@gmail.com');
+let madre = new Persona3('Laura', 'Contrera', 'contreral@gmail.com');
 console.log(madre);
 console.log(madre.telefono); // la propiedad no esta definida
 console.log(madre.nombreCompleto());
@@ -136,10 +136,10 @@ let miArreglo1 = new Array(); // Formal
 let miArreglo2 = []; // Sintaxis recomendada
 
 // Caso function 1 
-let miFuncion1 = new function(){}; //Todo despues de new es considerado objeto
+let miFuncion1 = new function () { }; //Todo despues de new es considerado objeto
 
 // Caso fuction 2
-let miFuncion2 = function(){}; // Notación simplificada y recomendada
+let miFuncion2 = function () { }; // Notación simplificada y recomendada
 
 // uso de prototype
 Persona3.prototype.telefono = '2618383832'
@@ -147,3 +147,21 @@ console.log(padre);
 console.log(madre.telefono);
 madre.telefono = '5492618383832'
 console.log(madre.telefono);
+
+
+// Uso de call
+let persona4 = {
+    nombre: 'Juan',
+    apellido: 'Perez',
+    nombreCompleto2: function (titulo, telefono) {
+        return titulo + ': ' + this.nombre + ' ' + this.apellido + ' ' + telefono;
+    }
+}
+let persona5 = {
+    nombre: 'Carlos',
+    apellido: 'Lara'
+}
+
+
+console.log(persona4.nombreCompleto2('Lic.','5492618484845'));
+console.log(persona4.nombreCompleto2.call(persona5, 'Ing','5492618585856'));
