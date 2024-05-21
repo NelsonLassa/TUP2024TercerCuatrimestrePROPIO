@@ -1,3 +1,4 @@
 
-archivo = open('prueba.txt','r', encoding='utf8')
+archivo = open('prueba.txt','x', encoding='utf8') #
 print(archivo.read())
+
