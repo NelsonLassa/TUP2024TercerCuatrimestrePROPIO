@@ -1,6 +1,6 @@
-let persona3 = new Persona('Carla','Persona');
+//let persona3 = new Persona('Carla','Persona');
 
-class Persona{
+class Persona{// Clase Padre
     constructor(nombre, apellido){
         this._nombre = nombre;
         this._apellido = apellido;
@@ -19,7 +19,18 @@ class Persona{
         this._apellido = apellido;
     }
 }
+class Empleado extends Persona{ // Clase hija
+    constructor(departamento){
+        this._departamento = departamento;
+    }
 
+    get departamento(){
+        return this._departamento;
+    }
+    set departamento(departamento){
+        this._departamento = departamento;
+    }
+}
 let persona1 = new Persona('Martín','Perez');
 console.log(persona1.nombre);
 persona1.nombre = 'Juan Carlos';
