@@ -155,6 +155,10 @@ let persona4 = {
     apellido: 'Perez',
     nombreCompleto2: function (titulo, telefono) {
         return titulo + ': ' + this.nombre + ' ' + this.apellido + ' ' + telefono;
+        
+    },
+    nombreCompleto3: function () {
+        return this.nombre+ ' '+ this.apellido
     }
 }
 let persona5 = {
@@ -165,3 +169,10 @@ let persona5 = {
 
 console.log(persona4.nombreCompleto2('Lic.','5492618484845'));
 console.log(persona4.nombreCompleto2.call(persona5, 'Ing','5492618585856'));
+
+// Método Apply
+console.log(persona4.nombreCompleto3.apply(persona5));
+
+let arreglo = ['Ing.', '5492618686865'] // creamos un arreglo para poder enviarle los argumentos necesarios
+console.log(persona4.nombreCompleto2.apply(persona5,arreglo));
+
