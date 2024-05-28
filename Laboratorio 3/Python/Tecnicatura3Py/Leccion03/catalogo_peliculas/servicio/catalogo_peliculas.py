@@ -4,9 +4,9 @@ class CatalogoPeliculas:
     ruta_archivo = 'peliculas.txt'
 
     @classmethod
-    def agregar_peluculas(cls,peliculas):
+    def agregar_peluculas(cls,pelicula):
         with open(cls.ruta_archivo,'a',encoding='utf8') as archivo:
-            archivo.read(f'{Pelicula.nombre}\n')
+            archivo.read(f'{pelicula.nombre}\n')
 
     @classmethod
     def listar_peliculas(cls):
