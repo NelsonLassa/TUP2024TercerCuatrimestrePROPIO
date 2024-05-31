@@ -18,6 +18,11 @@ class Persona {// Clase Padre
     set apellido(apellido) {
         this._apellido = apellido;
     }
+
+    // Metodo
+    nombreCompleto() {
+        return this._nombre + ' ' + this._apellido;
+    }
 }
 class Empleado extends Persona { // Clase hija
     constructor(nombre, apellido, departamento) {
@@ -53,6 +58,9 @@ console.log(persona2.apellido);
 persona2.apellido = 'Castro';
 console.log(persona2.apellido);
 
-let empleado = new Empleado('Nelson','Lassa','Atención al Publico');
+let empleado = new Empleado('Nelson', 'Lassa', 'Atención al Publico');
 console.log(empleado);
 console.log(empleado.nombre)
+
+// Herencia
+console.log(empleado.nombreCompleto());
