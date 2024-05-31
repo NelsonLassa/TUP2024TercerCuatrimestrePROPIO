@@ -36,6 +36,13 @@ class Empleado extends Persona { // Clase hija
     set departamento(departamento) {
         this._departamento = departamento;
     }
+
+    // Sobre escritura (Modificar el comportamiento de un metodo de la clase padre)
+    nombreCompleto() {
+        //return this._nombre + " " + this._apellido + ", " + this._departamento;
+        return super.nombreCompleto() + ", " + this._departamento;
+    }
+
 }
 let persona1 = new Persona('Martín', 'Perez');
 console.log(persona1.nombre);
