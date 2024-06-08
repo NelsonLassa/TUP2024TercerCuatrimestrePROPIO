@@ -16,12 +16,12 @@ public class TestCoversionObjetos {
         //Downcasting conversión de escritura
         // TODO convierte a un tipo padre a un tipo hijo
         //((Escritor)empleado).getTipoEscritura(); // Tenemos 2 opciones: esta es una
-        //Escritor escritor = (Escritor) empleado; // Esta es la segubda opción
-        //escritor.getTipoEscritura();
+        Escritor escritor = (Escritor) empleado; // Esta es la segubda opción
+        escritor.getTipoEscritura();
 
-        // Upcasting
-        //Empleado empleado2 = escritor;
-        //ikhjugytfdvbJOptionPane.showMessageDialog(null, empleado2.obtenerDetalles());
+        // Upcasting: convierte un hijo tipo de clase hija hacia la clase padre
+        Empleado empleado2 = escritor;
+        JOptionPane.showMessageDialog(null, empleado2.obtenerDetalles());
 
     }
 }
