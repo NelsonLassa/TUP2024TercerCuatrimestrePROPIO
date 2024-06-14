@@ -1,9 +1,14 @@
 //let persona3 = new Persona('Carla','Persona');
 
 class Persona {// Clase Padre
+
+    static contadorObjetoPersona = 0;
+
     constructor(nombre, apellido) {
         this._nombre = nombre;
         this._apellido = apellido;
+        Persona.contadorObjetoPersona++;
+        console.log('Se incrementa el contador: '+ Persona.contadorObjetoPersona);
     }
 
     get nombre() {
@@ -99,3 +104,7 @@ Persona.saludar2(persona1);
 
 Empleado.saludar();
 Empleado.saludar2(persona1);
+
+//console.log(persona1.contadorObjetoPersona);
+console.log(Persona.contadorObjetoPersona);
+console.log(Empleado.contadorObjetoPersona);
