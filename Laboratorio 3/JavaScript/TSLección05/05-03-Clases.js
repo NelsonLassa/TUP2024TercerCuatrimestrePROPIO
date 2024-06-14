@@ -30,6 +30,14 @@ class Persona {// Clase Padre
         // El método que se ejecuta depende si es una referencia de tipo padre o hija
         return this.nombreCompleto();
     }
+
+    static saludar(){
+        console.log('Saludos desde este método static');
+    }
+
+    static saludar2(persona){
+        console.log(persona.nombre);
+    }
 }
 class Empleado extends Persona { // Clase hija
     constructor(nombre, apellido, departamento) {
@@ -84,3 +92,6 @@ console.log(empleado.nombreCompleto());
 console.log(empleado.toString());
 console.log(persona1.toString());
 
+//persona1.saludar(); no se utiliza desde el objeto
+Persona.saludar();
+Persona.saludar2(persona1);
