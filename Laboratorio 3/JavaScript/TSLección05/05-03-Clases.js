@@ -118,3 +118,8 @@ console.log(persona1.toString());
 console.log(persona2.toString());
 console.log(empleado.toString());
 console.log(Persona.contadorPersonas);
+
+// Creamos un nuevo Objeto
+let persona3 = new Persona('Carla', 'Pertosi');
+console.log(persona3.toString());
+console.log(Persona.contadorPersonas);
