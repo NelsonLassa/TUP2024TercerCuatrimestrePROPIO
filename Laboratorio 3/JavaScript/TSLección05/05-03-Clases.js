@@ -2,14 +2,14 @@
 
 class Persona {// Clase Padre
 
-    static contadorObjetoPersona = 0; // Atributo estático
-    email = 'Valor default email';  // Atributo no estático
+    static contadorPersonas = 0; // Atributo estático
+    ///email = 'Valor default email';  // Atributo no estático
 
     constructor(nombre, apellido) {
         this._nombre = nombre;
         this._apellido = apellido;
-        Persona.contadorObjetoPersona++;
-        console.log('Se incrementa el contador: '+ Persona.contadorObjetoPersona);
+        this.idPersona = ++Persona.contadorPersonas;
+        //console.log('Se incrementa el contador: '+ Persona.contadorObjetoPersona);
     }
 
     get nombre() {
@@ -27,22 +27,22 @@ class Persona {// Clase Padre
 
     // Metodo
     nombreCompleto() {
-        return this._nombre + ' ' + this._apellido;
+        return this.idPersona + ' ' + this._nombre + ' ' + this._apellido;
     }
 
     // SDobreescribimos el método de la clase padre (Object)
-    toString(){ // Regresa un String
+    toString() { // Regresa un String
         //Se aplica el polimorfismo que significa = multiples formas en tiempo de ejecución
         // El método que se ejecuta depende si es una referencia de tipo padre o hija
         return this.nombreCompleto();
     }
 
-    static saludar(){
+    static saludar() {
         console.log('Saludos desde este método static');
     }
 
-    static saludar2(persona){
-        console.log(persona.nombre+' '+persona.apellido);
+    static saludar2(persona) {
+        console.log(persona.nombre + ' ' + persona.apellido);
     }
 }
 class Empleado extends Persona { // Clase hija
@@ -110,6 +110,11 @@ Empleado.saludar2(persona1);
 console.log(Persona.contadorObjetoPersona);
 console.log(Empleado.contadorObjetoPersona);
 
-console.log(persona1.email);
-console.log(empleado.email);
+//console.log(persona1.email);
+//console.log(empleado.email);
 //console.log(Persona.email); No se puede acceder desde la clase
+
+console.log(persona1.toString());
+console.log(persona2.toString());
+console.log(empleado.toString());
+console.log(Persona.contadorPersonas);
