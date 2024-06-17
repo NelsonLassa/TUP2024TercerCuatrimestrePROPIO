@@ -11,9 +11,10 @@ try:
     with conexion:
         with conexion.cursor() as cursor:
             # cursor = conexion.cursor() # Esto ya esta haciendolo el with
-            sentencia = 'SELECT * FROM persona WHERE id_persona IN (1,2)'  # Placeholder
-            #id_persona = input('Digite un número para el id_ perosona: ')
-            cursor.execute(sentencia)  # De esta manera ejecutamos la sentencia
+            sentencia = 'SELECT * FROM persona WHERE id_persona IN %s'  # Placeholder
+            entrada = input('Digite los id_persona a buscar (separados por coma): ')
+            llaves_primarias = (tuple(entrada.split(', ')),)  # Metodo que separa por comas
+            cursor.execute(sentencia, llaves_primarias)  # De esta manera ejecutamos la sentencia
             registros = cursor.fetchall()  # Recuperamos todos los reregistros que seran una lista
             for registro in registros:
                 print(registros)
