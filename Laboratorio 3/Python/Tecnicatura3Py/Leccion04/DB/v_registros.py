@@ -17,7 +17,7 @@ try:
             cursor.execute(sentencia, llaves_primarias)  # De esta manera ejecutamos la sentencia
             registros = cursor.fetchall()  # Recuperamos todos los reregistros que seran una lista
             for registro in registros:
-                print(registros)
+                print(registro)
 except Exception as e:
     print(f'Ocurrio un error: {e}')
 finally:
