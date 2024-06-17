@@ -18,7 +18,7 @@ try:
             )# Es una tupla de tuplas
             cursor.executemany(sentencia, valores)  # De esta manera ejecutamos la sentencia
             registros_actualizados = cursor.rowcount  # Ingresa cada columna
-            print(f'los registros insertados son: {registros_actualizados}')
+            print(f'los registros actualizados son: {registros_actualizados}')
 
 except Exception as e:
     print(f'Ocurrio un error: {e}')
