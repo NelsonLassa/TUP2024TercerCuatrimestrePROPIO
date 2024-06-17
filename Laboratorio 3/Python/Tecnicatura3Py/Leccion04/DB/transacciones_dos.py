@@ -11,11 +11,11 @@ try:
     conexion.autocommit = False # esto directamente no deberia estar, iniica la transacción
     cursor = conexion.cursor()
     sentencia = 'INSERT INTO persona(nombre, apellido,email) VALUES (%s, %s, %s)'
-    valores = ('Carlos', 'Lara', 'clara@mail.com')
+    valores = ('Jorge', 'Prol', 'jprol@mail.com')
     cursor.execute(sentencia, valores)
 
     sentencia = 'UPDATE persona SET nombre=%s, apellido=%s, email=%s WHERE id_persona=%s'
-    valores = ('Juan', 'Juarez','jcjuarez@mail.com',1)
+    valores = ('Juan Carlos', 'Perez','jcjuarez@mail.com',1)
     cursor.execute(sentencia,valores)
 
 
