@@ -1,5 +1,5 @@
 from Persona import Persona
-from conexion import Conexion
+from connection import Conexion
 from logger_base import log
 
 
