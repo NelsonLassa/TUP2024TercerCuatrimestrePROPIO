@@ -1,4 +1,5 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>150</x><y>90</y><w>210</w><h>130</h></coordinates><panel_attributes>&lt;&lt;Persona&gt;&gt;
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>150</x><y>90</y><w>210</w><h>130</h></coordinates><panel_attributes>&lt;&lt;Persona&gt;&gt;
+--
 _nombre: String
 _apellido: String
 --
